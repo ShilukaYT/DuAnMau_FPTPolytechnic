@@ -39,6 +39,7 @@ namespace LoginRegistrationForm
             this.login_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +73,7 @@ namespace LoginRegistrationForm
             this.label5.Size = new System.Drawing.Size(24, 26);
             this.label5.TabIndex = 11;
             this.label5.Text = "x";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // login_close
             // 
@@ -164,6 +166,10 @@ namespace LoginRegistrationForm
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +199,7 @@ namespace LoginRegistrationForm
         private System.Windows.Forms.Label login_registerHere;
         private System.Windows.Forms.Label login_close;
         private System.Windows.Forms.Label label5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
