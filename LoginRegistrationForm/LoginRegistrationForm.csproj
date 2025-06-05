@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\icons8_user_male_circle_104px_2.png" />
+    <Content Include="CSDL.sql" />
     <None Include="Resources\Hat-Kho.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
