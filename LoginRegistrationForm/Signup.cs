@@ -29,7 +29,9 @@ namespace LoginRegistrationForm
 
         private void signup_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            Form1 lForm = new Form1();
+            lForm.Show();
         }
 
         private void signup_btn_Click(object sender, EventArgs e)
