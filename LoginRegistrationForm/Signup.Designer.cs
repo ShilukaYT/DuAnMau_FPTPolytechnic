@@ -30,97 +30,171 @@ namespace LoginRegistrationForm
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.signup_password = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtMaXacNhan = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.signup_close = new System.Windows.Forms.Label();
             this.signup_loginHere = new System.Windows.Forms.Label();
-            this.signup_btn = new System.Windows.Forms.Button();
-            this.signup_username = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.signup_email = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.signup_password);
+            this.panel1.Controls.Add(this.groupBox5);
+            this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.signup_close);
             this.panel1.Controls.Add(this.signup_loginHere);
-            this.panel1.Controls.Add(this.signup_btn);
-            this.panel1.Controls.Add(this.signup_username);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.signup_email);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 507);
+            this.panel1.Size = new System.Drawing.Size(356, 431);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox1
+            // groupBox5
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(204, 253);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(256, 36);
-            this.textBox1.TabIndex = 15;
+            this.groupBox5.Controls.Add(this.txtNhapLaiMatKhau);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(22, 283);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(311, 55);
+            this.groupBox5.TabIndex = 24;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Nhập lại mật khẩu";
             // 
-            // label5
+            // txtNhapLaiMatKhau
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 259);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 25);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Nhập lại mật khẩu:";
+            this.txtNhapLaiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNhapLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(2, 18);
+            this.txtNhapLaiMatKhau.Multiline = true;
+            this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
+            this.txtNhapLaiMatKhau.PasswordChar = '*';
+            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(307, 35);
+            this.txtNhapLaiMatKhau.TabIndex = 5;
             // 
-            // label9
+            // groupBox4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 195);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 25);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Mật khẩu:";
+            this.groupBox4.Controls.Add(this.txtMatKhau);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(22, 223);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(311, 55);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Mật khẩu";
             // 
-            // signup_password
+            // txtMatKhau
             // 
-            this.signup_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_password.Location = new System.Drawing.Point(207, 190);
-            this.signup_password.Margin = new System.Windows.Forms.Padding(4);
-            this.signup_password.Multiline = true;
-            this.signup_password.Name = "signup_password";
-            this.signup_password.PasswordChar = '*';
-            this.signup_password.Size = new System.Drawing.Size(253, 36);
-            this.signup_password.TabIndex = 12;
+            this.txtMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(2, 18);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(307, 35);
+            this.txtMatKhau.TabIndex = 5;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtMaXacNhan);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(22, 162);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(311, 55);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mã xác nhận";
+            // 
+            // txtMaXacNhan
+            // 
+            this.txtMaXacNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMaXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaXacNhan.Location = new System.Drawing.Point(2, 18);
+            this.txtMaXacNhan.Multiline = true;
+            this.txtMaXacNhan.Name = "txtMaXacNhan";
+            this.txtMaXacNhan.Size = new System.Drawing.Size(307, 35);
+            this.txtMaXacNhan.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtTenDangNhap);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(22, 102);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(311, 55);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tên đăng nhập";
+            // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(2, 18);
+            this.txtTenDangNhap.Multiline = true;
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(307, 35);
+            this.txtTenDangNhap.TabIndex = 5;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtHoTen);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(22, 42);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(311, 55);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Họ và tên";
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(2, 18);
+            this.txtHoTen.Multiline = true;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(307, 35);
+            this.txtHoTen.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(404, 267);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(303, 217);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 20);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 11;
             // 
             // signup_close
@@ -128,10 +202,9 @@ namespace LoginRegistrationForm
             this.signup_close.AutoSize = true;
             this.signup_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signup_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_close.Location = new System.Drawing.Point(436, 11);
-            this.signup_close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.signup_close.Location = new System.Drawing.Point(327, 9);
             this.signup_close.Name = "signup_close";
-            this.signup_close.Size = new System.Drawing.Size(24, 24);
+            this.signup_close.Size = new System.Drawing.Size(18, 18);
             this.signup_close.TabIndex = 10;
             this.signup_close.Text = "X";
             this.signup_close.Click += new System.EventHandler(this.signup_close_Click);
@@ -142,97 +215,60 @@ namespace LoginRegistrationForm
             this.signup_loginHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signup_loginHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_loginHere.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.signup_loginHere.Location = new System.Drawing.Point(175, 392);
-            this.signup_loginHere.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.signup_loginHere.Location = new System.Drawing.Point(135, 400);
             this.signup_loginHere.Name = "signup_loginHere";
-            this.signup_loginHere.Size = new System.Drawing.Size(88, 18);
+            this.signup_loginHere.Size = new System.Drawing.Size(77, 15);
             this.signup_loginHere.TabIndex = 9;
             this.signup_loginHere.Text = "Đăng nhập";
             this.signup_loginHere.Click += new System.EventHandler(this.signup_loginHere_Click);
             // 
-            // signup_btn
+            // btnThem
             // 
-            this.signup_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.signup_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signup_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_btn.ForeColor = System.Drawing.Color.Black;
-            this.signup_btn.Location = new System.Drawing.Point(155, 328);
-            this.signup_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.signup_btn.Name = "signup_btn";
-            this.signup_btn.Size = new System.Drawing.Size(133, 43);
-            this.signup_btn.TabIndex = 6;
-            this.signup_btn.Text = "ĐĂNG KÝ";
-            this.signup_btn.UseVisualStyleBackColor = false;
-            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
-            // 
-            // signup_username
-            // 
-            this.signup_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_username.Location = new System.Drawing.Point(207, 127);
-            this.signup_username.Margin = new System.Windows.Forms.Padding(4);
-            this.signup_username.Multiline = true;
-            this.signup_username.Name = "signup_username";
-            this.signup_username.Size = new System.Drawing.Size(253, 36);
-            this.signup_username.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tài khoản:";
-            // 
-            // signup_email
-            // 
-            this.signup_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_email.Location = new System.Drawing.Point(207, 65);
-            this.signup_email.Margin = new System.Windows.Forms.Padding(4);
-            this.signup_email.Multiline = true;
-            this.signup_email.Name = "signup_email";
-            this.signup_email.Size = new System.Drawing.Size(253, 36);
-            this.signup_email.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên người dùng:";
+            this.btnThem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Location = new System.Drawing.Point(120, 351);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 35);
+            this.btnThem.TabIndex = 6;
+            this.btnThem.Text = "ĐĂNG KÝ";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(124, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 24);
+            this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG KÝ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 506);
+            this.ClientSize = new System.Drawing.Size(355, 431);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -242,16 +278,18 @@ namespace LoginRegistrationForm
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label signup_close;
         private System.Windows.Forms.Label signup_loginHere;
-        private System.Windows.Forms.Button signup_btn;
-        private System.Windows.Forms.TextBox signup_username;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox signup_email;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox signup_password;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtNhapLaiMatKhau;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtMaXacNhan;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtHoTen;
     }
 }

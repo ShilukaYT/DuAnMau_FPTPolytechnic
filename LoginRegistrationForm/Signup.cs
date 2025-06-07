@@ -14,7 +14,7 @@ namespace LoginRegistrationForm
 {
     public partial class Signup : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WINDOWS 10\Documents\loginData.mdf;Integrated Security=True;Connect Timeout=30");
+        DataClassesDBDataContext db = new DataClassesDBDataContext();
         public Signup()
         {
             InitializeComponent();
@@ -29,102 +29,69 @@ namespace LoginRegistrationForm
 
         private void signup_close_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form1 lForm = new Form1();
-            lForm.Show();
+            Application.Exit();
         }
 
-        private void signup_btn_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            if(signup_email.Text == "" || signup_username.Text == "" 
-                || signup_password.Text == "")
+                        // Lấy dữ liệu từ TextBox
+            string tenDangNhap = txtTenDangNhap.Text.Trim();
+            string matKhau = txtMatKhau.Text.Trim();
+            string nhapLaiMatKhau = txtNhapLaiMatKhau.Text.Trim();
+            string hoTen = txtHoTen.Text.Trim();
+            string maXacNhan = txtMaXacNhan.Text.Trim();
+
+            // Kiểm tra rỗng
+            if (string.IsNullOrEmpty(tenDangNhap) ||
+                string.IsNullOrEmpty(matKhau) ||
+                string.IsNullOrEmpty(nhapLaiMatKhau) ||
+                string.IsNullOrEmpty(hoTen) ||
+                string.IsNullOrEmpty(maXacNhan))
             {
-                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                return;
             }
-            else
+
+            // Kiểm tra mật khẩu nhập lại
+            if (matKhau != nhapLaiMatKhau)
             {
-                if (connect.State != ConnectionState.Open)
-                {
-                    try
-                    {
-                        connect.Open();
-                        String checkUsername = "SELECT * FROM admin WHERE username = '"
-                            + signup_username.Text.Trim() + "'"; // admin is our table name
+                MessageBox.Show("Mật khẩu nhập lại không khớp!");
+                return;
+            }
 
-                        using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
-                        {
-                            SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
+            // Kiểm tra tên đăng nhập trùng
+            bool tonTai = db.TAI_KHOANs.Any(t => t.Ten_Dang_Nhap == tenDangNhap);
+            if (tonTai)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại!");
+                return;
+            }
 
-                            if (table.Rows.Count >= 1)
-                            {
-                                MessageBox.Show(signup_username.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                string insertData = "INSERT INTO admin (email, username, passowrd, date_created) " +
-                                    "VALUES(@email, @username, @pass, @date)";
+            try
+            {
+                // Tạo tài khoản mới
+                TAI_KHOAN tk = new TAI_KHOAN
+                {                   
+                    Ten_Dang_Nhap = tenDangNhap,
+                    Mat_Khau = matKhau, 
+                    Ho_Ten = hoTen,
+                    Ngay_Tao = DateTime.Now,
+                    Trang_Thai = false, 
+                    Ma_Xac_Nhan = maXacNhan
+                };
 
-                                DateTime date = DateTime.Today;
+                db.TAI_KHOANs.InsertOnSubmit(tk);
+                db.SubmitChanges();
 
-                                using (SqlCommand cmd = new SqlCommand(insertData, connect))
-                                {
-                                    cmd.Parameters.AddWithValue("@email", signup_email.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@pass", signup_password.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@date", date);
-
-                                    cmd.ExecuteNonQuery();
-
-                                    MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    // TO SWITCH THE FORM 
-                                    Form1 lForm = new Form1();
-                                    lForm.Show();
-                                    this.Hide();
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error connecting Database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        connect.Close();
-                    }
-                }
-            
+                MessageBox.Show("Thêm tài khoản thành công!");
+                Form1 lForm = new Form1();
+                lForm.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
-
-        //private void signup_showPass_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    if (signup_showPass.Checked)
-        //    {
-        //        signup_password.PasswordChar = '\0';
-        //    }
-        //    else
-        //    {
-        //        signup_password.PasswordChar = '*';
-        //    }
-        //}
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
-}

@@ -14,7 +14,7 @@ namespace LoginRegistrationForm
 {
     public partial class Form1 : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WINDOWS 10\Documents\loginData.mdf;Integrated Security=True;Connect Timeout=30");
+        DataClassesDBDataContext db = new DataClassesDBDataContext();
         public Form1()
         {
             InitializeComponent();
@@ -27,16 +27,41 @@ namespace LoginRegistrationForm
             this.Hide();
         }
 
-        private void login_close_Click(object sender, EventArgs e)
+        private void closeLogin_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();    
-            this.Hide();
+            string tenDangNhap = txtTenDangNhap.Text.Trim();
+            string matKhau = txtMatKhau.Text.Trim();
+
+            // Kiểm tra thông tin đăng nhập
+            var nguoiDung = db.TAI_KHOANs
+                              .FirstOrDefault(t => t.Ten_Dang_Nhap == tenDangNhap && t.Mat_Khau == matKhau);
+
+            if (nguoiDung != null)
+            {
+                // Đăng nhập thành công - lưu vào Session
+                Session.MaTaiKhoan = nguoiDung.Ma_Tai_Khoan;
+                Session.TenDangNhap = nguoiDung.Ten_Dang_Nhap;
+                Session.HoTen = nguoiDung.Ho_Ten;
+
+                // Chuyển sang form chính
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(tenDangNhap))
+                {
+                    MessageBox.Show("Vui lòng nhập tên đăng nhập!");
+                }
+                else
+                    MessageBox.Show("Sai mật khẩu!");
+            }
         }
 
         private void login_password_TextChanged(object sender, EventArgs e)
@@ -48,20 +73,10 @@ namespace LoginRegistrationForm
         {
 
         }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void login_close_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

@@ -28,206 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.login_username = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.labelTittleTen = new System.Windows.Forms.Label();
+            this.labelTittleMk = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbHoTen = new System.Windows.Forms.TextBox();
+            this.buttonAddGiaoDich = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbMkCu = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxMkMoi = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBoxNhapLaiMk = new System.Windows.Forms.TextBox();
+            this.buttonDoiMk = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // labelTittleTen
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(276, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tài Khoản";
+            this.labelTittleTen.AutoSize = true;
+            this.labelTittleTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTittleTen.Location = new System.Drawing.Point(356, 167);
+            this.labelTittleTen.Name = "labelTittleTen";
+            this.labelTittleTen.Size = new System.Drawing.Size(272, 32);
+            this.labelTittleTen.TabIndex = 4;
+            this.labelTittleTen.Text = "Cập nhật thông tin ";
             // 
-            // label1
+            // labelTittleMk
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 32);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Cập nhật thông tin :";
+            this.labelTittleMk.AutoSize = true;
+            this.labelTittleMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTittleMk.Location = new System.Drawing.Point(357, 288);
+            this.labelTittleMk.Name = "labelTittleMk";
+            this.labelTittleMk.Size = new System.Drawing.Size(271, 32);
+            this.labelTittleMk.TabIndex = 6;
+            this.labelTittleMk.Text = "Thay đổi mật khẩu ";
             // 
-            // label2
+            // groupBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 32);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Họ và tên :";
+            this.groupBox2.Controls.Add(this.tbHoTen);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(136, 202);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(415, 68);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Họ và tên";
             // 
-            // label4
+            // tbHoTen
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(261, 32);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Thay đổi mật khẩu :";
+            this.tbHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHoTen.Location = new System.Drawing.Point(3, 23);
+            this.tbHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.tbHoTen.Multiline = true;
+            this.tbHoTen.Name = "tbHoTen";
+            this.tbHoTen.Size = new System.Drawing.Size(409, 42);
+            this.tbHoTen.TabIndex = 5;
             // 
-            // label5
+            // buttonAddGiaoDich
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 254);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 32);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Mật khẩu cũ :";
+            this.buttonAddGiaoDich.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddGiaoDich.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonAddGiaoDich.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddGiaoDich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddGiaoDich.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddGiaoDich.Location = new System.Drawing.Point(629, 213);
+            this.buttonAddGiaoDich.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAddGiaoDich.Name = "buttonAddGiaoDich";
+            this.buttonAddGiaoDich.Size = new System.Drawing.Size(133, 52);
+            this.buttonAddGiaoDich.TabIndex = 20;
+            this.buttonAddGiaoDich.Text = "CẬP NHẬT";
+            this.buttonAddGiaoDich.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // groupBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 299);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 32);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Mật khẩu mới :";
+            this.groupBox1.Controls.Add(this.tbMkCu);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(136, 332);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(415, 68);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mật khẩu cũ";
             // 
-            // label7
+            // tbMkCu
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(45, 345);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(257, 32);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Nhập lại mật khẩu :";
+            this.tbMkCu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbMkCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMkCu.Location = new System.Drawing.Point(3, 23);
+            this.tbMkCu.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMkCu.Multiline = true;
+            this.tbMkCu.Name = "tbMkCu";
+            this.tbMkCu.PasswordChar = '*';
+            this.tbMkCu.Size = new System.Drawing.Size(409, 42);
+            this.tbMkCu.TabIndex = 5;
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(282, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Đổi mật khẩu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.groupBox3.Controls.Add(this.textBoxMkMoi);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(136, 406);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(415, 68);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mật khẩu mới";
             // 
-            // button2
+            // textBoxMkMoi
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(670, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 36);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cập nhật";
-            this.button2.UseVisualStyleBackColor = false;
+            this.textBoxMkMoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxMkMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMkMoi.Location = new System.Drawing.Point(3, 23);
+            this.textBoxMkMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxMkMoi.Multiline = true;
+            this.textBoxMkMoi.Name = "textBoxMkMoi";
+            this.textBoxMkMoi.PasswordChar = '*';
+            this.textBoxMkMoi.Size = new System.Drawing.Size(409, 42);
+            this.textBoxMkMoi.TabIndex = 5;
             // 
-            // login_username
+            // groupBox4
             // 
-            this.login_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_username.Location = new System.Drawing.Point(313, 118);
-            this.login_username.Margin = new System.Windows.Forms.Padding(4);
-            this.login_username.Multiline = true;
-            this.login_username.Name = "login_username";
-            this.login_username.Size = new System.Drawing.Size(350, 36);
-            this.login_username.TabIndex = 14;
+            this.groupBox4.Controls.Add(this.textBoxNhapLaiMk);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(136, 480);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(415, 68);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Nhập lại mật khẩu";
             // 
-            // textBox1
+            // textBoxNhapLaiMk
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(313, 204);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 36);
-            this.textBox1.TabIndex = 15;
+            this.textBoxNhapLaiMk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxNhapLaiMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNhapLaiMk.Location = new System.Drawing.Point(3, 23);
+            this.textBoxNhapLaiMk.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNhapLaiMk.Multiline = true;
+            this.textBoxNhapLaiMk.Name = "textBoxNhapLaiMk";
+            this.textBoxNhapLaiMk.PasswordChar = '*';
+            this.textBoxNhapLaiMk.Size = new System.Drawing.Size(409, 42);
+            this.textBoxNhapLaiMk.TabIndex = 5;
             // 
-            // textBox2
+            // buttonDoiMk
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(313, 250);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(350, 36);
-            this.textBox2.TabIndex = 16;
+            this.buttonDoiMk.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonDoiMk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonDoiMk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDoiMk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoiMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDoiMk.ForeColor = System.Drawing.Color.Black;
+            this.buttonDoiMk.Location = new System.Drawing.Point(629, 417);
+            this.buttonDoiMk.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDoiMk.Name = "buttonDoiMk";
+            this.buttonDoiMk.Size = new System.Drawing.Size(133, 52);
+            this.buttonDoiMk.TabIndex = 20;
+            this.buttonDoiMk.Text = "ĐỔI MẬT KHẨU";
+            this.buttonDoiMk.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // pictureBox1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(313, 294);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(350, 36);
-            this.textBox3.TabIndex = 17;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(313, 341);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(350, 36);
-            this.textBox4.TabIndex = 18;
+            this.pictureBox1.BackgroundImage = global::LoginRegistrationForm.Properties.Resources._219983;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(391, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 139);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // FormTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.login_username);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(933, 560);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonDoiMk);
+            this.Controls.Add(this.buttonAddGiaoDich);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.labelTittleMk);
+            this.Controls.Add(this.labelTittleTen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTaiKhoan";
             this.Text = "FormTaiKhoan";
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox login_username;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label labelTittleTen;
+        private System.Windows.Forms.Label labelTittleMk;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tbHoTen;
+        private System.Windows.Forms.Button buttonAddGiaoDich;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbMkCu;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBoxMkMoi;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBoxNhapLaiMk;
+        private System.Windows.Forms.Button buttonDoiMk;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

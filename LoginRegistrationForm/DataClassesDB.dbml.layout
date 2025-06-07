@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesDB">
+  <DataContextMoniker Name="/DataClassesDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="db50ae4a-e7de-488f-a006-38d463d31ac3" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDBDataContext/DANH_MUC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1082ce90-45ac-4325-a17a-7e3b47eb1763" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee131898-f4ed-4ec9-9f07-9384e0f9e54f" absoluteBounds="3, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesDBDataContext/TAI_KHOAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e60a55ae-596d-49b4-905d-1b7c84e8173e" absoluteBounds="3.0149999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.28929768880208); (2.5 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDBDataContext/TAI_KHOAN/TAI_KHOAN_DANH_MUC" />
+      <nodes>
+        <classShapeMoniker Id="ee131898-f4ed-4ec9-9f07-9384e0f9e54f" />
+        <classShapeMoniker Id="db50ae4a-e7de-488f-a006-38d463d31ac3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="454408a7-0813-45f3-8e3a-c483c1536fc2" absoluteBounds="5.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDBDataContext/VI_TIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aedc144d-2270-4073-ba00-e14d4a203280" absoluteBounds="5.515, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 1.28929768880208); (5.5 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDBDataContext/TAI_KHOAN/TAI_KHOAN_VI_TIEN" />
+      <nodes>
+        <classShapeMoniker Id="ee131898-f4ed-4ec9-9f07-9384e0f9e54f" />
+        <classShapeMoniker Id="454408a7-0813-45f3-8e3a-c483c1536fc2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="64f091fc-f28a-4d72-b88f-5f4671a043a9" absoluteBounds="5.5, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesDBDataContext/GIAO_DICH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67c65414-a90e-4164-be3d-10b5e70ee7a5" absoluteBounds="5.515, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 2.07859537760417); (1.5 : 3.65309895833333); (5.5 : 3.65309895833333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDBDataContext/DANH_MUC/DANH_MUC_GIAO_DICH" />
+      <nodes>
+        <classShapeMoniker Id="db50ae4a-e7de-488f-a006-38d463d31ac3" />
+        <classShapeMoniker Id="64f091fc-f28a-4d72-b88f-5f4671a043a9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 2.07859537760417); (6.5 : 2.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDBDataContext/VI_TIEN/VI_TIEN_GIAO_DICH" />
+      <nodes>
+        <classShapeMoniker Id="454408a7-0813-45f3-8e3a-c483c1536fc2" />
+        <classShapeMoniker Id="64f091fc-f28a-4d72-b88f-5f4671a043a9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

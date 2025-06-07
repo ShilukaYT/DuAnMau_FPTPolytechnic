@@ -28,87 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label11 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.dtpNgayCuoi = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayDau = new System.Windows.Forms.DateTimePicker();
+            this.chartBieuDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelThu = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelChi = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.buttonHienThi = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBieuDo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // dtpNgayCuoi
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(526, 68);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 21;
+            this.dtpNgayCuoi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayCuoi.Location = new System.Drawing.Point(477, 70);
+            this.dtpNgayCuoi.Name = "dtpNgayCuoi";
+            this.dtpNgayCuoi.Size = new System.Drawing.Size(281, 28);
+            this.dtpNgayCuoi.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // dtpNgayDau
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 20;
+            this.dtpNgayDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayDau.Location = new System.Drawing.Point(477, 22);
+            this.dtpNgayDau.Name = "dtpNgayDau";
+            this.dtpNgayDau.Size = new System.Drawing.Size(281, 28);
+            this.dtpNgayDau.TabIndex = 20;
             // 
-            // chart1
+            // chartBieuDo
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(70, 163);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(700, 287);
-            this.chart1.TabIndex = 19;
-            this.chart1.Text = "chart1";
+            chartArea3.Name = "ChartArea1";
+            this.chartBieuDo.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartBieuDo.Legends.Add(legend3);
+            this.chartBieuDo.Location = new System.Drawing.Point(12, 111);
+            this.chartBieuDo.Name = "chartBieuDo";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartBieuDo.Series.Add(series3);
+            this.chartBieuDo.Size = new System.Drawing.Size(909, 437);
+            this.chartBieuDo.TabIndex = 19;
+            this.chartBieuDo.Text = "chart1";
             // 
-            // label11
+            // labelThu
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(555, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 32);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "1.000.000";
+            this.labelThu.AutoSize = true;
+            this.labelThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThu.Location = new System.Drawing.Point(159, 18);
+            this.labelThu.Name = "labelThu";
+            this.labelThu.Size = new System.Drawing.Size(53, 32);
+            this.labelThu.TabIndex = 18;
+            this.labelThu.Text = "0 đ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(411, 115);
+            this.label10.Location = new System.Drawing.Point(15, 66);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 32);
             this.label10.TabIndex = 17;
             this.label10.Text = "Tổng chi :";
             // 
-            // label9
+            // labelChi
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(208, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 32);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "3.000.000";
+            this.labelChi.AutoSize = true;
+            this.labelChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChi.Location = new System.Drawing.Point(159, 65);
+            this.labelChi.Name = "labelChi";
+            this.labelChi.Size = new System.Drawing.Size(53, 32);
+            this.labelChi.TabIndex = 16;
+            this.labelChi.Text = "0 đ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 115);
+            this.label8.Location = new System.Drawing.Point(12, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 32);
             this.label8.TabIndex = 15;
@@ -117,52 +121,77 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(412, 67);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(321, 66);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 25);
+            this.label6.Size = new System.Drawing.Size(150, 32);
             this.label6.TabIndex = 14;
             this.label6.Text = "Đến ngày :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 67);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(321, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
+            this.label4.Size = new System.Drawing.Size(131, 32);
             this.label4.TabIndex = 13;
             this.label4.Text = "Từ ngày :";
             // 
-            // label3
+            // btnClear
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 32);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Thống Kê";
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(788, 22);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(133, 28);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.Text = "XOÁ HẾT";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // buttonHienThi
+            // 
+            this.buttonHienThi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonHienThi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonHienThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHienThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHienThi.ForeColor = System.Drawing.Color.Black;
+            this.buttonHienThi.Location = new System.Drawing.Point(788, 69);
+            this.buttonHienThi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHienThi.Name = "buttonHienThi";
+            this.buttonHienThi.Size = new System.Drawing.Size(133, 28);
+            this.buttonHienThi.TabIndex = 22;
+            this.buttonHienThi.Text = "HIỂN THỊ";
+            this.buttonHienThi.UseVisualStyleBackColor = false;
+            this.buttonHienThi.Click += new System.EventHandler(this.buttonHienThi_Click);
             // 
             // FormThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(933, 560);
+            this.Controls.Add(this.buttonHienThi);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.dtpNgayCuoi);
+            this.Controls.Add(this.dtpNgayDau);
+            this.Controls.Add(this.chartBieuDo);
+            this.Controls.Add(this.labelThu);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelChi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThongKe";
             this.Text = "FormThongKe";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBieuDo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,15 +199,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpNgayCuoi;
+        private System.Windows.Forms.DateTimePicker dtpNgayDau;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBieuDo;
+        private System.Windows.Forms.Label labelThu;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelChi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button buttonHienThi;
     }
 }

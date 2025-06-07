@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Quan_Li_Thu_Chi" Class="DataClassesDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Quan_Li_Thu_Chi;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="LoginRegistrationForm.Properties.Settings" SettingsPropertyName="Quan_Li_Thu_ChiConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DANH_MUC" Member="DANH_MUCs">
+    <Type Name="DANH_MUC">
+      <Column Name="Ma_Danh_Muc" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Danh_Muc" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Loai_Thu_Chi" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_Tai_Khoan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DANH_MUC_GIAO_DICH" Member="GIAO_DICHes" ThisKey="Ma_Danh_Muc" OtherKey="Ma_Danh_Muc" Type="GIAO_DICH" />
+      <Association Name="TAI_KHOAN_DANH_MUC" Member="TAI_KHOAN" ThisKey="Ma_Tai_Khoan" OtherKey="Ma_Tai_Khoan" Type="TAI_KHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAI_KHOAN" Member="TAI_KHOANs">
+    <Type Name="TAI_KHOAN">
+      <Column Name="Ma_Tai_Khoan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Dang_Nhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Mat_Khau" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Ho_Ten" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay_Tao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Trang_Thai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ma_Xac_Nhan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TAI_KHOAN_DANH_MUC" Member="DANH_MUCs" ThisKey="Ma_Tai_Khoan" OtherKey="Ma_Tai_Khoan" Type="DANH_MUC" />
+      <Association Name="TAI_KHOAN_VI_TIEN" Member="VI_TIENs" ThisKey="Ma_Tai_Khoan" OtherKey="Ma_Tai_Khoan" Type="VI_TIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VI_TIEN" Member="VI_TIENs">
+    <Type Name="VI_TIEN">
+      <Column Name="Ma_Vi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Vi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="So_Du" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Ma_Tai_Khoan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="VI_TIEN_GIAO_DICH" Member="GIAO_DICHes" ThisKey="Ma_Vi" OtherKey="Ma_Vi" Type="GIAO_DICH" />
+      <Association Name="TAI_KHOAN_VI_TIEN" Member="TAI_KHOAN" ThisKey="Ma_Tai_Khoan" OtherKey="Ma_Tai_Khoan" Type="TAI_KHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIAO_DICH" Member="GIAO_DICHes">
+    <Type Name="GIAO_DICH">
+      <Column Name="Ma_Giao_Dich" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ma_Vi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_Danh_Muc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="So_Tien" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Tinh_Trang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ngay_Giao_Dich" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DANH_MUC_GIAO_DICH" Member="DANH_MUC" ThisKey="Ma_Danh_Muc" OtherKey="Ma_Danh_Muc" Type="DANH_MUC" IsForeignKey="true" />
+      <Association Name="VI_TIEN_GIAO_DICH" Member="VI_TIEN" ThisKey="Ma_Vi" OtherKey="Ma_Vi" Type="VI_TIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
