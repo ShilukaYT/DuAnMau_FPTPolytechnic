@@ -27,7 +27,7 @@ namespace LoginRegistrationForm.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DAI\\MYSQLSERVER;Initial Catalog=Quan_Li_Thu_Chi;Persist Security Info" +
-            "=True;User ID=sa;TrustServerCertificate=True")]
+            "=True;User ID=sa;Password=123456789;TrustServerCertificate=True")]
         public string Quan_Li_Thu_ChiConnectionString {
             get {
                 return ((string)(this["Quan_Li_Thu_ChiConnectionString"]));

@@ -12,7 +12,7 @@ namespace LoginRegistrationForm.Forms
 {
     public partial class FormCapNhatViTien : Form
     {
-        DataClassesDBDataContext db = new DataClassesDBDataContext();
+
         int id = -1;
 
         public FormCapNhatViTien()
@@ -22,20 +22,27 @@ namespace LoginRegistrationForm.Forms
 
         void loadData()
         {
-            int maNguoiDung = Session.MaTaiKhoan;
-            dgvViTien.AutoGenerateColumns = false;
-            var dataGridView = from s in db.VI_TIENs where s.Ma_Tai_Khoan == maNguoiDung select s;
-            dgvViTien.DataSource = dataGridView.ToList<VI_TIEN>();
+            using (var db = new DataClassesDBDataContext())
+            {
+                int maNguoiDung = Session.MaTaiKhoan;
+                dgvViTien.AutoGenerateColumns = false;
+                var dataGridView = from s in db.VI_TIENs where s.Ma_Tai_Khoan == maNguoiDung select s;
+                dgvViTien.DataSource = dataGridView.ToList<VI_TIEN>();
+            }
         }
 
         void getDataByID()
         {
-            var viTien = db.VI_TIENs.FirstOrDefault(k => k.Ma_Vi == id);
-            if (viTien != null)
+            using (var db = new DataClassesDBDataContext())
             {
-                tbTenVi.Text = viTien.Ten_Vi;
-                tbSoDu.Text = viTien.So_Du.ToString();
+                var viTien = db.VI_TIENs.FirstOrDefault(k => k.Ma_Vi == id);
+                if (viTien != null)
+                {
+                    tbTenVi.Text = viTien.Ten_Vi;
+                    tbSoDu.Text = viTien.So_Du.ToString();
+                }
             }
+
 
         }
 
@@ -51,7 +58,7 @@ namespace LoginRegistrationForm.Forms
 
         private void dgvViTien_DoubleClick(object sender, EventArgs e)
         {
-            if (dgvViTien.CurrentRow.Index != -1)
+            if (dgvViTien.CurrentRow != null)
             {
                 id = Convert.ToInt32(dgvViTien.CurrentRow.Cells[0].Value);
                 getDataByID();
@@ -61,6 +68,19 @@ namespace LoginRegistrationForm.Forms
 
         private void btnSuaVi_Click(object sender, EventArgs e)
         {
+            int maNguoiDung = Session.MaTaiKhoan;
+            string tenVi = tbTenVi.Text.Trim();
+
+            using (var db = new DataClassesDBDataContext())
+            {
+                bool tonTai = db.VI_TIENs.Any(t => t.Ten_Vi == tenVi && t.Ma_Tai_Khoan == maNguoiDung && t.Ma_Vi != id);
+                if (tonTai)
+                {
+                    MessageBox.Show("Tên ví đã tồn tại!");
+                    return;
+                }
+            }
+
             if (id == -1)
             {
                 MessageBox.Show("Vui lòng chọn ví cần sửa.");
@@ -80,14 +100,13 @@ namespace LoginRegistrationForm.Forms
                 {
                     vi.Ten_Vi = tbTenVi.Text.Trim();
                     vi.So_Du = soDuMoi;
-                    db.SubmitChanges();
-
+                    db.SubmitChanges();            
                     MessageBox.Show("Cập nhật ví thành công!");
                     id = -1;
                     tbTenVi.Clear();
                     tbSoDu.Clear();
                     loadData();
-                }
+                }               
             }
         }
 
@@ -119,6 +138,48 @@ namespace LoginRegistrationForm.Forms
                     }
                 }
             }
+        }
+
+        private void button_TaoVi_Click(object sender, EventArgs e)
+        {
+            int maNguoiDung = Session.MaTaiKhoan;
+            string tenVi = tbTenVi.Text.Trim();
+            using (var db = new DataClassesDBDataContext())
+            {
+                bool tonTai = db.VI_TIENs.Any(t => t.Ten_Vi == tenVi && t.Ma_Tai_Khoan == maNguoiDung);
+                if (tonTai)
+                {
+                    MessageBox.Show("Tên ví đã tồn tại!");
+                    return;
+                }
+                if (!decimal.TryParse(tbSoDu.Text, out decimal soDu))
+                {
+                    MessageBox.Show("Vui lòng nhập số dư hợp lệ.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(tenVi) || soDu == 0)
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+                    return;
+                }
+                    VI_TIEN vitien = new VI_TIEN
+                    {
+                        Ten_Vi = tenVi,
+                        So_Du = soDu,
+                        Ma_Tai_Khoan = maNguoiDung,
+                    };
+
+                    db.VI_TIENs.InsertOnSubmit(vitien);
+                    db.SubmitChanges();
+
+                    MessageBox.Show("Thêm ví tiền thành công!");
+                    tbSoDu.Clear();
+                    tbTenVi.Clear();
+                    loadData();
+                
+            }
+
         }
     }
 }

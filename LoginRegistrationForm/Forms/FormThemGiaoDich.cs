@@ -12,8 +12,6 @@ namespace LoginRegistrationForm.Forms
 {
     public partial class FormThemGiaoDich : Form
     {
-
-        DataClassesDBDataContext db = new DataClassesDBDataContext();
         //id ví tiền chưa chọn gì trong bảng là -1
         int id = -1;
         public FormThemGiaoDich()
@@ -25,12 +23,18 @@ namespace LoginRegistrationForm.Forms
         {
             using (var db = new DataClassesDBDataContext())
             {
+                string loaiLoc = null;
+                if (rbLocThu.Checked) loaiLoc = "Thu";
+                else if (rbLocChi.Checked) loaiLoc = "Chi";
+                // nếu rbLocTatCa thì giữ null
+
                 var danhSachGiaoDich = from gd in db.GIAO_DICHes
                                        join vi in db.VI_TIENs on gd.Ma_Vi equals vi.Ma_Vi
                                        join dm in db.DANH_MUCs on gd.Ma_Danh_Muc equals dm.Ma_Danh_Muc
                                        where vi.Ma_Tai_Khoan == maTaiKhoan
+                                       && (loaiLoc == null || dm.Loai_Thu_Chi == loaiLoc)
                                        select new
-                                       {    
+                                       {
                                            MaGiaoDich = gd.Ma_Giao_Dich,
                                            TenVi = vi.Ten_Vi,
                                            DanhMuc = dm.Ten_Danh_Muc,
@@ -40,8 +44,26 @@ namespace LoginRegistrationForm.Forms
                                            TinhTrang = gd.Tinh_Trang == true ? "Hoàn thành" : "Chưa hoàn thành"
                                        };
 
-                dgvGiaoDich.AutoGenerateColumns = false;
-                dgvGiaoDich.DataSource = danhSachGiaoDich.ToList();
+                var dt = new DataTable();
+                dt.Columns.Add("MaGiaoDich", typeof(int));
+                dt.Columns.Add("TenVi", typeof(string));
+                dt.Columns.Add("DanhMuc", typeof(string));
+                dt.Columns.Add("SoTien", typeof(decimal));
+                dt.Columns.Add("NgayGiaoDich", typeof(DateTime));
+                dt.Columns.Add("TinhTrang", typeof(string));
+
+                foreach (var gd in danhSachGiaoDich)
+                {
+                    dt.Rows.Add(gd.MaGiaoDich, gd.TenVi, gd.DanhMuc, gd.SoTien, gd.NgayGiaoDich, gd.TinhTrang);
+                }
+
+                dgvGiaoDich.DataSource = dt.DefaultView; // <-- DefaultView cho phép sắp xếp
+                // Tắt dòng * ở cuối
+                dgvGiaoDich.AllowUserToAddRows = false;
+                foreach (DataGridViewColumn column in dgvGiaoDich.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.Automatic;
+                }
             }
         }
 
@@ -230,6 +252,24 @@ namespace LoginRegistrationForm.Forms
                     }
                 }
             }
+        }
+
+        private void rbLocTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbLocTatCa.Checked)
+                LoadGiaoDichTheoNguoiDung(Session.MaTaiKhoan);
+        }
+
+        private void rbLocThu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbLocThu.Checked)
+                LoadGiaoDichTheoNguoiDung(Session.MaTaiKhoan);
+        }
+
+        private void rbLocChi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbLocChi.Checked)
+                LoadGiaoDichTheoNguoiDung(Session.MaTaiKhoan);
         }
     }
 }

@@ -134,13 +134,6 @@ namespace LoginRegistrationForm
 
         }
 
-        private void buttonTaoViTien_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormTaoViTien(), sender);
-            labelTenApp.Text = "Tạo Ví Tiền";
-            labelTenApp.Anchor = System.Windows.Forms.AnchorStyles.None;
-
-        }
 
         private void buttonTaiKhoan_Click(object sender, EventArgs e)
         {

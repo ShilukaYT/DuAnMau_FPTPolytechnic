@@ -55,12 +55,7 @@ namespace LoginRegistrationForm
             }
             else
             {
-                if (string.IsNullOrEmpty(tenDangNhap))
-                {
-                    MessageBox.Show("Vui lòng nhập tên đăng nhập!");
-                }
-                else
-                    MessageBox.Show("Sai mật khẩu!");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
         }
 
