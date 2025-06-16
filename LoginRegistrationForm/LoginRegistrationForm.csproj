@@ -161,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\icons8_user_male_circle_104px_2.png" />
+    <None Include="Resources\anh-mo-ta.png" />
     <None Include="Resources\ChatGPT Image 09_11_37 7 thg 6, 2025.png" />
     <None Include="Resources\219983.png" />
     <None Include="Resources\close-x-svgrepo-com.png" />

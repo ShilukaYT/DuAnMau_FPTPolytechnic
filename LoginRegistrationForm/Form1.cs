@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace LoginRegistrationForm
@@ -55,7 +54,31 @@ namespace LoginRegistrationForm
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                if (tenDangNhap == string.Empty && matKhau == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                }
+                else if (tenDangNhap == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập tên đăng nhập!");
+                }
+                else if (db.TAI_KHOANs.Any(t => t.Ten_Dang_Nhap == tenDangNhap) == false)
+                    {
+                        MessageBox.Show("Tên đăng nhập không đúng!");
+                    }
+
+                else if (matKhau == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu!");
+                }
+                else if (db.TAI_KHOANs.Any(t => t.Mat_Khau == matKhau) == false)
+                {
+                    MessageBox.Show("Mật khẩu không đúng!");
+                }
+                {
+                     
+                }
+
             }
         }
 

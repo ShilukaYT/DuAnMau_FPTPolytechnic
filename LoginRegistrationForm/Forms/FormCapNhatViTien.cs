@@ -152,17 +152,23 @@ namespace LoginRegistrationForm.Forms
                     MessageBox.Show("Tên ví đã tồn tại!");
                     return;
                 }
+                if (string.IsNullOrEmpty(tenVi))
+                {
+                    MessageBox.Show("Vui lòng nhập tên ví.");
+                    return;
+                }
                 if (!decimal.TryParse(tbSoDu.Text, out decimal soDu))
                 {
                     MessageBox.Show("Vui lòng nhập số dư hợp lệ.");
                     return;
                 }
-
-                if (string.IsNullOrEmpty(tenVi) || soDu == 0)
+                if (soDu == null)
                 {
-                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+                    MessageBox.Show("Số dư không được để trống.");
                     return;
                 }
+
+
                     VI_TIEN vitien = new VI_TIEN
                     {
                         Ten_Vi = tenVi,

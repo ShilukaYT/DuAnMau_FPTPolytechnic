@@ -92,5 +92,31 @@ namespace LoginRegistrationForm.Forms
                 }
             }
         }
-    }  
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ShowOldPass.Checked)
+            {
+                tbMkCu.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                tbMkCu.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void chk_ShowNewPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ShowNewPass.Checked)
+            {
+                textBoxMkMoi.UseSystemPasswordChar = true;
+                textBoxNhapLaiMk.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                textBoxMkMoi.UseSystemPasswordChar = false;
+                textBoxNhapLaiMk.UseSystemPasswordChar = false;
+            }
+        }
+    }
 }

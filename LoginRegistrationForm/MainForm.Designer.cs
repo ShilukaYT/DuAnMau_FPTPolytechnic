@@ -155,7 +155,7 @@ namespace LoginRegistrationForm
             this.buttonThemGiaoDich.Name = "buttonThemGiaoDich";
             this.buttonThemGiaoDich.Size = new System.Drawing.Size(200, 65);
             this.buttonThemGiaoDich.TabIndex = 11;
-            this.buttonThemGiaoDich.Text = "Thêm giao dịch";
+            this.buttonThemGiaoDich.Text = "Quản lí giao dịch";
             this.buttonThemGiaoDich.UseVisualStyleBackColor = false;
             this.buttonThemGiaoDich.Click += new System.EventHandler(this.buttonThemGiaoDich_Click);
             // 
@@ -172,7 +172,7 @@ namespace LoginRegistrationForm
             this.buttonCapNhatVi.Name = "buttonCapNhatVi";
             this.buttonCapNhatVi.Size = new System.Drawing.Size(200, 65);
             this.buttonCapNhatVi.TabIndex = 10;
-            this.buttonCapNhatVi.Text = "Cập nhật ví tiền";
+            this.buttonCapNhatVi.Text = "Quản lí ví tiền";
             this.buttonCapNhatVi.UseVisualStyleBackColor = false;
             this.buttonCapNhatVi.Click += new System.EventHandler(this.buttonCapNhatVi_Click);
             // 
@@ -189,7 +189,7 @@ namespace LoginRegistrationForm
             this.buttonThemDanhMuc.Name = "buttonThemDanhMuc";
             this.buttonThemDanhMuc.Size = new System.Drawing.Size(200, 65);
             this.buttonThemDanhMuc.TabIndex = 9;
-            this.buttonThemDanhMuc.Text = "Thêm danh mục";
+            this.buttonThemDanhMuc.Text = "Quản lí danh mục";
             this.buttonThemDanhMuc.UseVisualStyleBackColor = false;
             this.buttonThemDanhMuc.Click += new System.EventHandler(this.buttonThemDanhMuc_Click);
             // 
@@ -244,11 +244,11 @@ namespace LoginRegistrationForm
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::LoginRegistrationForm.Properties.Resources.ChatGPT_Image_09_11_37_7_thg_6__2025;
+            this.pictureBox1.BackgroundImage = global::LoginRegistrationForm.Properties.Resources.anh_mo_ta;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 64);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
