@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,10 +57,29 @@ namespace LoginRegistrationForm.Forms
             string mkCu = tbMkCu.Text;
             string mkMoi = textBoxMkMoi.Text;
             string mkNhapLai = textBoxNhapLaiMk.Text;
-
-            if (string.IsNullOrWhiteSpace(mkCu) || string.IsNullOrWhiteSpace(mkMoi) || string.IsNullOrWhiteSpace(mkNhapLai))
+            if (string.IsNullOrWhiteSpace(mkCu) && string.IsNullOrWhiteSpace(mkMoi) && string.IsNullOrWhiteSpace(mkNhapLai))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(mkCu))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu cũ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } else if (string.IsNullOrWhiteSpace(mkMoi))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu mới.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } else if (string.IsNullOrWhiteSpace(mkNhapLai))
+            {
+                MessageBox.Show("Vui lòng nhập lại mật khẩu mới.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (mkMoi == mkCu)
+            {
+                MessageBox.Show("Mật khẩu mới không được trùng với mật khẩu cũ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

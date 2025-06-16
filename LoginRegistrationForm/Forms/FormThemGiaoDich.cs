@@ -67,6 +67,54 @@ namespace LoginRegistrationForm.Forms
             }
         }
 
+        private void TimKiem(int maTaiKhoan, string timkiem)
+        {
+            using (var db = new DataClassesDBDataContext())
+            {
+                string loaiLoc = null;
+                if (rbLocThu.Checked) loaiLoc = "Thu";
+                else if (rbLocChi.Checked) loaiLoc = "Chi";
+                // nếu rbLocTatCa thì giữ null
+
+                var danhSachGiaoDich = from gd in db.GIAO_DICHes
+                                       join vi in db.VI_TIENs on gd.Ma_Vi equals vi.Ma_Vi
+                                       join dm in db.DANH_MUCs on gd.Ma_Danh_Muc equals dm.Ma_Danh_Muc
+                                       where vi.Ma_Tai_Khoan == maTaiKhoan && (vi.Ten_Vi.Contains(timkiem) || gd.DANH_MUC.Ten_Danh_Muc.Contains(timkiem))
+                                       && (loaiLoc == null || dm.Loai_Thu_Chi == loaiLoc)
+                                       select new
+                                       {
+                                           MaGiaoDich = gd.Ma_Giao_Dich,
+                                           TenVi = vi.Ten_Vi,
+                                           DanhMuc = dm.Ten_Danh_Muc,
+                                           Loai = dm.Loai_Thu_Chi,
+                                           SoTien = gd.So_Tien,
+                                           NgayGiaoDich = gd.Ngay_Giao_Dich,
+                                           TinhTrang = gd.Tinh_Trang == true ? "Hoàn thành" : "Chưa hoàn thành"
+                                       };
+
+                var dt = new DataTable();
+                dt.Columns.Add("MaGiaoDich", typeof(int));
+                dt.Columns.Add("TenVi", typeof(string));
+                dt.Columns.Add("DanhMuc", typeof(string));
+                dt.Columns.Add("SoTien", typeof(decimal));
+                dt.Columns.Add("NgayGiaoDich", typeof(DateTime));
+                dt.Columns.Add("TinhTrang", typeof(string));
+
+                foreach (var gd in danhSachGiaoDich)
+                {
+                    dt.Rows.Add(gd.MaGiaoDich, gd.TenVi, gd.DanhMuc, gd.SoTien, gd.NgayGiaoDich, gd.TinhTrang);
+                }
+
+                dgvGiaoDich.DataSource = dt.DefaultView; // <-- DefaultView cho phép sắp xếp
+                // Tắt dòng * ở cuối
+                dgvGiaoDich.AllowUserToAddRows = false;
+                foreach (DataGridViewColumn column in dgvGiaoDich.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.Automatic;
+                }
+            }
+        }
+
         private void login_username_TextChanged(object sender, EventArgs e)
         {
 
@@ -101,6 +149,9 @@ namespace LoginRegistrationForm.Forms
             int maNguoiDung = Session.MaTaiKhoan;
             LoadGiaoDichTheoNguoiDung(maNguoiDung);
             LoadComboBoxTheoTaiKhoan(maNguoiDung);
+            // Thiết lập trạng thái ban đầu cho radio button
+            rbThanhToan.Checked = true;
+            rbLocTatCa.Checked = true;
         }
 
         private void rbThanhToan_CheckedChanged(object sender, EventArgs e)
@@ -270,6 +321,11 @@ namespace LoginRegistrationForm.Forms
         {
             if (rbLocChi.Checked)
                 LoadGiaoDichTheoNguoiDung(Session.MaTaiKhoan);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            TimKiem(Session.MaTaiKhoan, txt_TimKiem.Text.Trim());
         }
     }
 }

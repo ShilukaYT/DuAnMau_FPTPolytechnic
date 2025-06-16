@@ -30,7 +30,7 @@ namespace LoginRegistrationForm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBoxChonVi = new System.Windows.Forms.ComboBox();
             this.buttonAddGiaoDich = new System.Windows.Forms.Button();
             this.groupLoaiDanhMuc = new System.Windows.Forms.GroupBox();
@@ -54,12 +54,15 @@ namespace LoginRegistrationForm.Forms
             this.rbLocChi = new System.Windows.Forms.RadioButton();
             this.rbLocThu = new System.Windows.Forms.RadioButton();
             this.rbLocTatCa = new System.Windows.Forms.RadioButton();
+            this.grp_TimKiem = new System.Windows.Forms.GroupBox();
+            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.groupLoaiDanhMuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDich)).BeginInit();
             this.gbLoaiDanhMuc.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.grp_TimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxChonVi
@@ -68,10 +71,10 @@ namespace LoginRegistrationForm.Forms
             this.comboBoxChonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChonVi.FormattingEnabled = true;
             this.comboBoxChonVi.IntegralHeight = false;
-            this.comboBoxChonVi.Location = new System.Drawing.Point(3, 22);
-            this.comboBoxChonVi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxChonVi.Location = new System.Drawing.Point(2, 18);
+            this.comboBoxChonVi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxChonVi.Name = "comboBoxChonVi";
-            this.comboBoxChonVi.Size = new System.Drawing.Size(369, 33);
+            this.comboBoxChonVi.Size = new System.Drawing.Size(277, 28);
             this.comboBoxChonVi.TabIndex = 9;
             // 
             // buttonAddGiaoDich
@@ -82,10 +85,9 @@ namespace LoginRegistrationForm.Forms
             this.buttonAddGiaoDich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddGiaoDich.ForeColor = System.Drawing.Color.Black;
-            this.buttonAddGiaoDich.Location = new System.Drawing.Point(784, 14);
-            this.buttonAddGiaoDich.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAddGiaoDich.Location = new System.Drawing.Point(588, 11);
             this.buttonAddGiaoDich.Name = "buttonAddGiaoDich";
-            this.buttonAddGiaoDich.Size = new System.Drawing.Size(133, 43);
+            this.buttonAddGiaoDich.Size = new System.Drawing.Size(100, 35);
             this.buttonAddGiaoDich.TabIndex = 6;
             this.buttonAddGiaoDich.Text = "Thêm";
             this.buttonAddGiaoDich.UseVisualStyleBackColor = false;
@@ -95,11 +97,11 @@ namespace LoginRegistrationForm.Forms
             // 
             this.groupLoaiDanhMuc.Controls.Add(this.comboBoxChonVi);
             this.groupLoaiDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLoaiDanhMuc.Location = new System.Drawing.Point(12, 12);
-            this.groupLoaiDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupLoaiDanhMuc.Location = new System.Drawing.Point(9, 10);
+            this.groupLoaiDanhMuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupLoaiDanhMuc.Name = "groupLoaiDanhMuc";
-            this.groupLoaiDanhMuc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupLoaiDanhMuc.Size = new System.Drawing.Size(375, 68);
+            this.groupLoaiDanhMuc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupLoaiDanhMuc.Size = new System.Drawing.Size(281, 55);
             this.groupLoaiDanhMuc.TabIndex = 11;
             this.groupLoaiDanhMuc.TabStop = false;
             this.groupLoaiDanhMuc.Text = "Chọn ví";
@@ -108,11 +110,11 @@ namespace LoginRegistrationForm.Forms
             // 
             this.groupBox1.Controls.Add(this.comboBoxChonDanhMuc);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(405, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(304, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(372, 68);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(279, 55);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn danh mục";
@@ -123,21 +125,21 @@ namespace LoginRegistrationForm.Forms
             this.comboBoxChonDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChonDanhMuc.FormattingEnabled = true;
             this.comboBoxChonDanhMuc.IntegralHeight = false;
-            this.comboBoxChonDanhMuc.Location = new System.Drawing.Point(3, 22);
-            this.comboBoxChonDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxChonDanhMuc.Location = new System.Drawing.Point(2, 18);
+            this.comboBoxChonDanhMuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxChonDanhMuc.Name = "comboBoxChonDanhMuc";
-            this.comboBoxChonDanhMuc.Size = new System.Drawing.Size(366, 33);
+            this.comboBoxChonDanhMuc.Size = new System.Drawing.Size(275, 28);
             this.comboBoxChonDanhMuc.TabIndex = 9;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tbSoTien);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 90);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(9, 73);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(375, 68);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(281, 55);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Số tiền";
@@ -146,11 +148,10 @@ namespace LoginRegistrationForm.Forms
             // 
             this.tbSoTien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSoTien.Location = new System.Drawing.Point(3, 22);
-            this.tbSoTien.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSoTien.Location = new System.Drawing.Point(2, 18);
             this.tbSoTien.Multiline = true;
             this.tbSoTien.Name = "tbSoTien";
-            this.tbSoTien.Size = new System.Drawing.Size(369, 44);
+            this.tbSoTien.Size = new System.Drawing.Size(277, 35);
             this.tbSoTien.TabIndex = 5;
             // 
             // buttonSuaGiaoDich
@@ -161,10 +162,9 @@ namespace LoginRegistrationForm.Forms
             this.buttonSuaGiaoDich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSuaGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSuaGiaoDich.ForeColor = System.Drawing.Color.Black;
-            this.buttonSuaGiaoDich.Location = new System.Drawing.Point(787, 64);
-            this.buttonSuaGiaoDich.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSuaGiaoDich.Location = new System.Drawing.Point(590, 52);
             this.buttonSuaGiaoDich.Name = "buttonSuaGiaoDich";
-            this.buttonSuaGiaoDich.Size = new System.Drawing.Size(133, 43);
+            this.buttonSuaGiaoDich.Size = new System.Drawing.Size(100, 35);
             this.buttonSuaGiaoDich.TabIndex = 6;
             this.buttonSuaGiaoDich.Text = "Sửa";
             this.buttonSuaGiaoDich.UseVisualStyleBackColor = false;
@@ -178,10 +178,9 @@ namespace LoginRegistrationForm.Forms
             this.buttonXoaDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXoaDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoaDanhMuc.ForeColor = System.Drawing.Color.Black;
-            this.buttonXoaDanhMuc.Location = new System.Drawing.Point(787, 114);
-            this.buttonXoaDanhMuc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonXoaDanhMuc.Location = new System.Drawing.Point(590, 93);
             this.buttonXoaDanhMuc.Name = "buttonXoaDanhMuc";
-            this.buttonXoaDanhMuc.Size = new System.Drawing.Size(133, 43);
+            this.buttonXoaDanhMuc.Size = new System.Drawing.Size(100, 35);
             this.buttonXoaDanhMuc.TabIndex = 6;
             this.buttonXoaDanhMuc.Text = "Xoá";
             this.buttonXoaDanhMuc.UseVisualStyleBackColor = false;
@@ -198,22 +197,22 @@ namespace LoginRegistrationForm.Forms
             this.SoTien,
             this.TinhTrang,
             this.NgayTao});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGiaoDich.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGiaoDich.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGiaoDich.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvGiaoDich.Location = new System.Drawing.Point(12, 225);
-            this.dgvGiaoDich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvGiaoDich.Location = new System.Drawing.Point(9, 183);
+            this.dgvGiaoDich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvGiaoDich.Name = "dgvGiaoDich";
             this.dgvGiaoDich.ReadOnly = true;
             this.dgvGiaoDich.RowHeadersWidth = 51;
             this.dgvGiaoDich.RowTemplate.Height = 24;
-            this.dgvGiaoDich.Size = new System.Drawing.Size(907, 323);
+            this.dgvGiaoDich.Size = new System.Drawing.Size(680, 262);
             this.dgvGiaoDich.TabIndex = 26;
             this.dgvGiaoDich.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoDich_CellDoubleClick);
             // 
@@ -276,11 +275,11 @@ namespace LoginRegistrationForm.Forms
             this.gbLoaiDanhMuc.Controls.Add(this.rbChuaThanhToan);
             this.gbLoaiDanhMuc.Controls.Add(this.rbThanhToan);
             this.gbLoaiDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLoaiDanhMuc.Location = new System.Drawing.Point(408, 98);
-            this.gbLoaiDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbLoaiDanhMuc.Location = new System.Drawing.Point(306, 80);
+            this.gbLoaiDanhMuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbLoaiDanhMuc.Name = "gbLoaiDanhMuc";
-            this.gbLoaiDanhMuc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbLoaiDanhMuc.Size = new System.Drawing.Size(367, 57);
+            this.gbLoaiDanhMuc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbLoaiDanhMuc.Size = new System.Drawing.Size(275, 46);
             this.gbLoaiDanhMuc.TabIndex = 27;
             this.gbLoaiDanhMuc.TabStop = false;
             this.gbLoaiDanhMuc.Text = "Tình trạng";
@@ -288,10 +287,10 @@ namespace LoginRegistrationForm.Forms
             // rbChuaThanhToan
             // 
             this.rbChuaThanhToan.AutoSize = true;
-            this.rbChuaThanhToan.Location = new System.Drawing.Point(181, 26);
-            this.rbChuaThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbChuaThanhToan.Location = new System.Drawing.Point(136, 21);
+            this.rbChuaThanhToan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbChuaThanhToan.Name = "rbChuaThanhToan";
-            this.rbChuaThanhToan.Size = new System.Drawing.Size(156, 24);
+            this.rbChuaThanhToan.Size = new System.Drawing.Size(135, 21);
             this.rbChuaThanhToan.TabIndex = 26;
             this.rbChuaThanhToan.TabStop = true;
             this.rbChuaThanhToan.Text = "Chưa hoàn thành";
@@ -300,10 +299,10 @@ namespace LoginRegistrationForm.Forms
             // rbThanhToan
             // 
             this.rbThanhToan.AutoSize = true;
-            this.rbThanhToan.Location = new System.Drawing.Point(5, 26);
-            this.rbThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbThanhToan.Location = new System.Drawing.Point(4, 21);
+            this.rbThanhToan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbThanhToan.Name = "rbThanhToan";
-            this.rbThanhToan.Size = new System.Drawing.Size(116, 24);
+            this.rbThanhToan.Size = new System.Drawing.Size(100, 21);
             this.rbThanhToan.TabIndex = 26;
             this.rbThanhToan.TabStop = true;
             this.rbThanhToan.Text = "Hoàn thành";
@@ -316,11 +315,11 @@ namespace LoginRegistrationForm.Forms
             this.groupBox3.Controls.Add(this.rbLocThu);
             this.groupBox3.Controls.Add(this.rbLocTatCa);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 162);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(9, 132);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(905, 57);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(207, 46);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lọc theo loại giao dịch";
@@ -328,10 +327,10 @@ namespace LoginRegistrationForm.Forms
             // rbLocChi
             // 
             this.rbLocChi.AutoSize = true;
-            this.rbLocChi.Location = new System.Drawing.Point(707, 24);
-            this.rbLocChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbLocChi.Location = new System.Drawing.Point(129, 21);
+            this.rbLocChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbLocChi.Name = "rbLocChi";
-            this.rbLocChi.Size = new System.Drawing.Size(55, 24);
+            this.rbLocChi.Size = new System.Drawing.Size(46, 21);
             this.rbLocChi.TabIndex = 26;
             this.rbLocChi.TabStop = true;
             this.rbLocChi.Text = "Chi";
@@ -341,10 +340,10 @@ namespace LoginRegistrationForm.Forms
             // rbLocThu
             // 
             this.rbLocThu.AutoSize = true;
-            this.rbLocThu.Location = new System.Drawing.Point(393, 24);
-            this.rbLocThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbLocThu.Location = new System.Drawing.Point(74, 21);
+            this.rbLocThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbLocThu.Name = "rbLocThu";
-            this.rbLocThu.Size = new System.Drawing.Size(58, 24);
+            this.rbLocThu.Size = new System.Drawing.Size(51, 21);
             this.rbLocThu.TabIndex = 26;
             this.rbLocThu.TabStop = true;
             this.rbLocThu.Text = "Thu";
@@ -354,21 +353,40 @@ namespace LoginRegistrationForm.Forms
             // rbLocTatCa
             // 
             this.rbLocTatCa.AutoSize = true;
-            this.rbLocTatCa.Location = new System.Drawing.Point(5, 26);
-            this.rbLocTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbLocTatCa.Location = new System.Drawing.Point(4, 21);
+            this.rbLocTatCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbLocTatCa.Name = "rbLocTatCa";
-            this.rbLocTatCa.Size = new System.Drawing.Size(77, 24);
+            this.rbLocTatCa.Size = new System.Drawing.Size(66, 21);
             this.rbLocTatCa.TabIndex = 26;
             this.rbLocTatCa.TabStop = true;
             this.rbLocTatCa.Text = "Tất cả";
             this.rbLocTatCa.UseVisualStyleBackColor = true;
             this.rbLocTatCa.CheckedChanged += new System.EventHandler(this.rbLocTatCa_CheckedChanged);
             // 
+            // grp_TimKiem
+            // 
+            this.grp_TimKiem.Controls.Add(this.txt_TimKiem);
+            this.grp_TimKiem.Location = new System.Drawing.Point(502, 135);
+            this.grp_TimKiem.Name = "grp_TimKiem";
+            this.grp_TimKiem.Size = new System.Drawing.Size(186, 43);
+            this.grp_TimKiem.TabIndex = 28;
+            this.grp_TimKiem.TabStop = false;
+            this.grp_TimKiem.Text = "Tìm kiếm";
+            // 
+            // txt_TimKiem
+            // 
+            this.txt_TimKiem.Location = new System.Drawing.Point(6, 17);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Size = new System.Drawing.Size(174, 20);
+            this.txt_TimKiem.TabIndex = 0;
+            this.txt_TimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // FormThemGiaoDich
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 560);
+            this.ClientSize = new System.Drawing.Size(700, 455);
+            this.Controls.Add(this.grp_TimKiem);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gbLoaiDanhMuc);
             this.Controls.Add(this.dgvGiaoDich);
@@ -379,7 +397,7 @@ namespace LoginRegistrationForm.Forms
             this.Controls.Add(this.buttonSuaGiaoDich);
             this.Controls.Add(this.buttonAddGiaoDich);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormThemGiaoDich";
             this.Text = "FormThemGiaoDich";
             this.Load += new System.EventHandler(this.FormThemGiaoDich_Load);
@@ -392,6 +410,8 @@ namespace LoginRegistrationForm.Forms
             this.gbLoaiDanhMuc.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.grp_TimKiem.ResumeLayout(false);
+            this.grp_TimKiem.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -420,5 +440,7 @@ namespace LoginRegistrationForm.Forms
         private System.Windows.Forms.RadioButton rbLocChi;
         private System.Windows.Forms.RadioButton rbLocThu;
         private System.Windows.Forms.RadioButton rbLocTatCa;
+        private System.Windows.Forms.GroupBox grp_TimKiem;
+        private System.Windows.Forms.TextBox txt_TimKiem;
     }
 }

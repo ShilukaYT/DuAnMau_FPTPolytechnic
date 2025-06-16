@@ -102,16 +102,32 @@ namespace LoginRegistrationForm.Forms
 
         private void buttonHienThi_Click(object sender, EventArgs e)
         {
+            if (dtpNgayDau.Value > dtpNgayCuoi.Value)
+            {
+                MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc.");
+                return;
+            }
             ThongKeVaVeBieuDo();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            dtpNgayDau.Value = DateTime.Today;
-            dtpNgayCuoi.Value = DateTime.Today;
+            dtpNgayDau.Value = DateTime.Parse("2010-01-01");
+            dtpNgayCuoi.Value = DateTime.Parse("2010-01-01");
 
             // Gọi lại hàm thống kê và vẽ biểu đồ như ban đầu
             ThongKeVaVeBieuDo();
+        }
+
+        private void chartBieuDo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormThongKe_Load(object sender, EventArgs e)
+        {
+            ThongKeVaVeBieuDo();
+
         }
     }
 }
